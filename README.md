@@ -15,8 +15,8 @@ A class that fetches a random cocktail from an API. It sends a GET request to th
 
 ## cocktail_generator:
 
-Fetches a random cocktail from an API and displays it. If the cocktail is not already in the list of previous cocktails, it is added. The user can generate a new cocktail, view details of the current cocktail, or view a list of previously generated cocktails.
+Fetches a random cocktail from an API and displays it. If the cocktail is not already in the list of previous cocktails, it is added.
 
 ## previous_cocktail:
 
-Displays a list of previously fetched cocktails. Each cocktail is displayed in a row with an image, name, category, and alcoholic content. There is also a button for each cocktail that navigates to a details page for that cocktail.
+Displays a list of previously fetched cocktails.
