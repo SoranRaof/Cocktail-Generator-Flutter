@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 class CocktailApi {
   final dio = Dio();
 
+  //Fetches a random cocktail from the API
   Future<List<Cocktail>> getCocktail() async {
     try {
       final response = await dio

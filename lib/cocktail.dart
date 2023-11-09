@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class Cocktail {
   final String id;
   final String drink;

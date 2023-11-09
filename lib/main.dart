@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'cocktail_instructions.dart';
+import 'cocktail_generator.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -7,6 +7,6 @@ void main() {
     theme: ThemeData(
       primarySwatch: Colors.purple,
     ),
-    home: CocktailInstructions(),
+    home: CocktailGenerator(),
   ));
 }
