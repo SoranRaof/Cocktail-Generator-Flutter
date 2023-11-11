@@ -34,17 +34,19 @@ class CocktailInstructionsPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: <Widget>[
-              Image.network(cocktail.image),
-              Text(cocktail.drink),
-              Text(cocktail.category),
-              Text(cocktail.alcoholic),
-              Text(cocktail.glass),
-              for (var ingredient in ingredients)
-                if (ingredient != null) Text(ingredient),
-              Text(cocktail.instructions),
-            ],
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                Image.network(cocktail.image),
+                Text(cocktail.drink),
+                Text(cocktail.category),
+                Text(cocktail.alcoholic),
+                Text(cocktail.glass),
+                for (var ingredient in ingredients)
+                  if (ingredient != null) Text(ingredient),
+                Text(cocktail.instructions),
+              ],
+            ),
           ),
         ),
       ),

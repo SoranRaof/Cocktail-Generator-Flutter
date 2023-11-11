@@ -65,6 +65,7 @@ class CocktailGeneratorState extends State<CocktailGenerator> {
                     child: Text('Generate Another Cocktail!'),
                     onPressed: _fetchCocktail,
                   ),
+                  SizedBox(height: 5),
                   ElevatedButton(
                     child: Text('See Details'),
                     onPressed: () {
