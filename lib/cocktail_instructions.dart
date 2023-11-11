@@ -9,6 +9,24 @@ class CocktailInstructionsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String?> ingredients = [
+      cocktail.ingredient1,
+      cocktail.ingredient2,
+      cocktail.ingredient3,
+      cocktail.ingredient4,
+      cocktail.ingredient5,
+      cocktail.ingredient6,
+      cocktail.ingredient7,
+      cocktail.ingredient8,
+      cocktail.ingredient9,
+      cocktail.ingredient10,
+      cocktail.ingredient11,
+      cocktail.ingredient12,
+      cocktail.ingredient13,
+      cocktail.ingredient14,
+      cocktail.ingredient15,
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: Text(cocktail.drink),
@@ -23,21 +41,8 @@ class CocktailInstructionsPage extends StatelessWidget {
               Text(cocktail.category),
               Text(cocktail.alcoholic),
               Text(cocktail.glass),
-              if (cocktail.ingredient1 != null) Text(cocktail.ingredient1!),
-              if (cocktail.ingredient2 != null) Text(cocktail.ingredient2!),
-              if (cocktail.ingredient3 != null) Text(cocktail.ingredient3!),
-              if (cocktail.ingredient4 != null) Text(cocktail.ingredient4!),
-              if (cocktail.ingredient5 != null) Text(cocktail.ingredient5!),
-              if (cocktail.ingredient6 != null) Text(cocktail.ingredient6!),
-              if (cocktail.ingredient7 != null) Text(cocktail.ingredient7!),
-              if (cocktail.ingredient8 != null) Text(cocktail.ingredient8!),
-              if (cocktail.ingredient9 != null) Text(cocktail.ingredient9!),
-              if (cocktail.ingredient10 != null) Text(cocktail.ingredient10!),
-              if (cocktail.ingredient11 != null) Text(cocktail.ingredient11!),
-              if (cocktail.ingredient12 != null) Text(cocktail.ingredient12!),
-              if (cocktail.ingredient13 != null) Text(cocktail.ingredient13!),
-              if (cocktail.ingredient14 != null) Text(cocktail.ingredient14!),
-              if (cocktail.ingredient15 != null) Text(cocktail.ingredient15!),
+              for (var ingredient in ingredients)
+                if (ingredient != null) Text(ingredient),
               Text(cocktail.instructions),
             ],
           ),

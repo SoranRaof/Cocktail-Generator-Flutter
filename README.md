@@ -4,10 +4,12 @@ Learning Flutter while building a simple app that generates random cocktail reci
 
 ## functionality
 
+- Introduction page.
 - A button prompts user to generate a cocktail.
 - Cocktail generates with image, name, category and alcoholic content.
 - Use can select see details for further instructions or generate cocktail.
-- History icon on the right corner of the screen shows a list of all cocktails generated within the session.
+- List of all cocktails generated within the session.
+- Filter non alcoholic cocktails.
 
 ## cocktail_api:
 

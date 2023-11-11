@@ -3,21 +3,46 @@ import 'package:flutter/material.dart';
 import 'cocktail.dart';
 
 //Page for the list of previous cocktails
-class PreviousCocktailsPage extends StatelessWidget {
+class PreviousCocktailsPage extends StatefulWidget {
   final List<Cocktail> previousCocktails;
 
   PreviousCocktailsPage(this.previousCocktails);
 
   @override
+  _PreviousCocktailsPageState createState() => _PreviousCocktailsPageState();
+}
+
+class _PreviousCocktailsPageState extends State<PreviousCocktailsPage> {
+  bool showNonAlcoholic = false;
+
+  @override
   Widget build(BuildContext context) {
+    List<Cocktail> displayedCocktails = showNonAlcoholic
+        ? widget.previousCocktails
+            .where((cocktail) => cocktail.alcoholic != "Alcoholic")
+            .toList()
+        : widget.previousCocktails;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Previous Cocktails'),
+        actions: <Widget>[
+          TextButton(
+            child: showNonAlcoholic
+                ? const Icon(Icons.local_bar, size: 30, color: Colors.white)
+                : const Icon(Icons.no_drinks, size: 30, color: Colors.white),
+            onPressed: () {
+              setState(() {
+                showNonAlcoholic = !showNonAlcoholic;
+              });
+            },
+          ),
+        ],
       ),
       body: ListView.builder(
-        itemCount: previousCocktails.length,
+        itemCount: displayedCocktails.length,
         itemBuilder: (context, index) {
-          final cocktail = previousCocktails[index];
+          final cocktail = displayedCocktails[index];
           return Row(
             children: [
               Expanded(

@@ -52,7 +52,7 @@ class CocktailGeneratorState extends State<CocktailGenerator> {
       body: Center(
         child: _cocktail == null
             ? ElevatedButton(
-                child: Text('Generate Cocktail'),
+                child: Text('Generate Cocktail!'),
                 onPressed: _fetchCocktail,
               )
             : Column(
@@ -62,7 +62,7 @@ class CocktailGeneratorState extends State<CocktailGenerator> {
                   Text(_cocktail!.category),
                   Text(_cocktail!.alcoholic),
                   ElevatedButton(
-                    child: Text('Generate Another Cocktail'),
+                    child: Text('Generate Another Cocktail!'),
                     onPressed: _fetchCocktail,
                   ),
                   ElevatedButton(
