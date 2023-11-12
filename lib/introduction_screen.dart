@@ -21,7 +21,7 @@ class IntroScreen extends StatelessWidget {
       PageViewModel(
         title: "Press the history button.",
         body:
-            "This will show you a list of all the cocktails you have generated so far along with an option to see the recipe intrsuctions.",
+            "This will show you a list of all the cocktails you have generated so far along with an option to see the recipe instructions.",
         image: const Center(
             child: Icon(Icons.history, size: 80, color: Colors.purple)),
       ),
